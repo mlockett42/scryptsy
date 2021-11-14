@@ -9,7 +9,9 @@
     "lib"
   ],
   "devDependencies": {
+    "browserify": "^17.0.0",
     "coveralls": "^3.0.3",
+    "crypto-browserify": "^3.12.0",
     "mocha": "^6.0.2",
     "mochify": "^6.1.0",
     "nyc": "^13.3.0",
@@ -36,6 +38,7 @@
     "coverage": "nyc --check-coverage --statements 80 --branches 60 --functions 90 --lines 90 mocha",
     "coveralls": "npm run-script coverage && coveralls < coverage/lcov.info",
     "browser-test": "mochify --wd -R spec",
-    "lint": "standard"
+    "lint": "standard",
+    "build": "./node_modules/browserify/bin/cmd.js lib/index.js --s scrypt > ./dist/scryptsy.js"
   }
 }

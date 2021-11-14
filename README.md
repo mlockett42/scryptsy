@@ -1,3 +1,7 @@
+From ML - to you browserify to build a bundle for a browser run
+`npm run build`
+
+
 scryptsy
 ========
 
